@@ -12,8 +12,8 @@ interface LocationDao {
     @Query("SELECT * FROM LocationEntity")
     fun getAllLocations(): List<LocationEntity>
 
-    @Query("SELECT * FROM locationentity WHERE sectionId = :sectionId")
-    fun getSectionLocations(sectionId: Int): List<LocationEntity>
+    @Query("SELECT * FROM LocationEntity WHERE sectionId = :sectionId")
+    fun getLocationsById(sectionId: Int): List<LocationEntity>
 
     @Query("UPDATE LocationEntity SET title = :newTitle WHERE id = :locationId")
     fun renameLocationTitle(locationId: Int, newTitle: String)
