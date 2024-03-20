@@ -4,10 +4,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class LocationEntity(
+data class LocationImageEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val sectionId: Int,
-    val title: String,
+    val locationId: Int,
+    val src: String,
+    val alt: String
 )
 
 
