@@ -1,4 +1,4 @@
-package com.saydullin.locationapp.domain.usecase
+package com.saydullin.locationapp.domain.usecase.location
 
 import com.saydullin.locationapp.domain.model.Location
 import com.saydullin.locationapp.domain.repository.LocationRepository
@@ -9,7 +9,7 @@ class AddLocationUseCase @Inject constructor(
     private val locationRepository: LocationRepository
 ) {
 
-    suspend fun execute(location: Location): Resource<Unit> {
+    suspend fun execute(location: Location): Resource<Location> {
         return locationRepository.addLocation(location)
     }
 
