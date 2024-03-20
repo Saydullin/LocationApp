@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1085569325287",
+    "project_id": "locationapp-ef5e9",
+    "storage_bucket": "locationapp-ef5e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085569325287:android:7b3d127037ef8922726a42",
+        "android_client_info": {
+          "package_name": "com.saydullin.locationapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtoTI5HddX0D9JvkN4i_nu3t16t1fdCG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
