@@ -1,4 +1,4 @@
-package com.saydullin.locationapp.ui.theme
+package com.saydullin.locationapp.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
