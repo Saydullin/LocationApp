@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
     id("androidx.room")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -58,6 +59,7 @@ android {
 
 dependencies {
 
+    implementation(libs.firebase.storage)
     // Room
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
