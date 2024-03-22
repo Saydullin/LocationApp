@@ -7,6 +7,6 @@ sealed class Resource<T>(
 
     class Success<T>(data: T?): Resource<T>(data)
 
-    class Error<T>(data: T? = null, statusCode: StatusCode): Resource<T>(data, statusCode)
+    class Error<T>(statusCode: StatusCode, data: T? = null): Resource<T>(data, statusCode)
 
 }

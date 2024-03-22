@@ -6,7 +6,12 @@ import com.saydullin.locationapp.data.db.AppDatabase
 import com.saydullin.locationapp.data.db.dao.LocationDao
 import com.saydullin.locationapp.data.db.dao.LocationImageDao
 import com.saydullin.locationapp.data.db.dao.LocationSectionDao
+import com.saydullin.locationapp.data.repository.LocationRepositoryImpl
 import com.saydullin.locationapp.data.repository.LocationSectionRepositoryImpl
+import com.saydullin.locationapp.domain.mapper.LocationEntityMapper
+import com.saydullin.locationapp.domain.mapper.LocationImageEntityMapper
+import com.saydullin.locationapp.domain.mapper.LocationMapper
+import com.saydullin.locationapp.domain.repository.LocationRepository
 import com.saydullin.locationapp.domain.repository.LocationSectionRepository
 import dagger.Module
 import dagger.Provides
@@ -49,8 +54,26 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun providesLocationRepository(): LocationSectionRepository {
+    fun providesLocationSectionRepository(): LocationSectionRepository {
         return LocationSectionRepositoryImpl()
+    }
+
+    @Provides
+    @Singleton
+    fun providesLocationRepository(
+        locationDao: LocationDao,
+        locationImageDao: LocationImageDao,
+        locationEntityMapper: LocationEntityMapper,
+        locationMapper: LocationMapper,
+        locationImageEntityMapper: LocationImageEntityMapper,
+    ): LocationRepository {
+        return LocationRepositoryImpl(
+            locationDao = locationDao,
+            locationEntityMapper = locationEntityMapper,
+            locationImageDao = locationImageDao,
+            locationMapper = locationMapper,
+            locationImageEntityMapper = locationImageEntityMapper
+        )
     }
 
 }

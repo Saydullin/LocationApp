@@ -59,6 +59,7 @@ android {
 
 dependencies {
 
+    // Firebase
     implementation(libs.firebase.storage)
     // Room
     val room_version = "2.6.1"
@@ -68,8 +69,8 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
 
     //Dagger
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.51")
+    kapt("com.google.dagger:hilt-android-compiler:2.51")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -91,3 +92,5 @@ dependencies {
 kapt {
     correctErrorTypes = true
 }
+
+

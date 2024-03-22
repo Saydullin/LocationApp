@@ -10,7 +10,7 @@ class GetLocationsByIdUseCase @Inject constructor(
 ) {
 
     suspend fun execute(locationId: Int): Resource<List<Location>> {
-        return locationRepository.getLocationsById(locationId)
+        return locationRepository.getLocationsBySectionId(locationId)
     }
 
 }

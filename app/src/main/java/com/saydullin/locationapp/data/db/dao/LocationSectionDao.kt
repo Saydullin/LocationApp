@@ -10,7 +10,7 @@ import com.saydullin.locationapp.data.db.entities.LocationSectionEntity
 interface LocationSectionDao {
 
     @Query("SELECT * FROM LocationSectionEntity")
-    fun getLocationSection(locationSectionId: Int): LocationSectionEntity?
+    fun getLocationSection(): LocationSectionEntity?
 
     @Query("UPDATE LocationSectionEntity SET title = :newTitle WHERE id = :locationSectionId")
     fun renameLocationSection(locationSectionId: Int, newTitle: String)
